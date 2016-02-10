@@ -184,8 +184,13 @@ class LdapManager implements LdapManagerInterface
         return (count($values) == 1 && array_key_exists(0, $values)) ? $values[0] : $values;
     }
     
-    public function update()
+   public function save($dn, $entry)
     {
-        //@todo 
+        return $this->driver->save($dn, $entry);
+    }
+
+    public function update($dn, $entry)
+    {
+        return $this->driver->update($dn, $entry);
     }
 }
