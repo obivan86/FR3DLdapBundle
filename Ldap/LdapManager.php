@@ -183,4 +183,6 @@ class LdapManager implements LdapManagerInterface
 
         return (count($values) == 1 && array_key_exists(0, $values)) ? $values[0] : $values;
     }
+    
+    //@TODO
 }
