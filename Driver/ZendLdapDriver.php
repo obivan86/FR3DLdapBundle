@@ -114,4 +114,14 @@ class ZendLdapDriver implements LdapDriverInterface
             $this->logger->debug($message);
         }
     }
+    
+    public function save($dn, $entry)
+    {
+        return $this->driver->save($dn, $entry);
+    }
+    
+    public function update($dn, $entry)
+    {
+        return $this->driver->update($dn, $entry);
+    }
 }
