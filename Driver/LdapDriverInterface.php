@@ -42,4 +42,8 @@ interface LdapDriverInterface
      * @throws LdapDriverException if some error occurs.
      */
     public function search($baseDn, $filter, array $attributes = array());
+    
+    public function save($dn, $entry);
+    
+    public function update($dn, $entry);
 }
